@@ -24,6 +24,9 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import {TamaguiProvider, Separator} from 'tamagui'; 
+import config from '../tamagui.config'
+
 function Section({children, title}) {
   const isDarkMode = useColorScheme() === 'dark';
   return (
@@ -59,6 +62,7 @@ function App() {
 
   return (
     <SafeAreaView style={backgroundStyle}>
+      <TamaguiProvider config={config}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
@@ -75,6 +79,7 @@ function App() {
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
           </Section>
+          <Separator/>
           <Section title="See Your Changes">
             <ReloadInstructions />
           </Section>
@@ -87,6 +92,7 @@ function App() {
           <LearnMoreLinks />
         </View>
       </ScrollView>
+      </TamaguiProvider>
     </SafeAreaView>
   );
 }

@@ -10,9 +10,16 @@
     "test": "jest"
   },
   "dependencies": {
+    "@tamagui/babel-plugin": "^1.8.4",
+    "@tamagui/config": "^1.8.4",
+    "@tamagui/core": "^1.8.4",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "jsc-android": "^250231.0.0",
     "react": "18.2.0",
-    "react-native": "0.71.4"
+    "react-dom": "^18.2.0",
+    "react-native": "0.71.4",
+    "react-native-web": "^0.18.12",
+    "tamagui": "^1.8.4"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
