@@ -24,6 +24,10 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import Constants from 'expo-constants';
+
+console.log(Constants);
+
 function Section({children, title}) {
   const isDarkMode = useColorScheme() === 'dark';
   return (
